@@ -396,12 +396,12 @@ nav {
     display: block;
   }
 
-  /* Navigation adjustments */
+  /* Navigation */
   .nav-links {
     gap: 20px;
   }
 
-  /* Work & About section adjustments */
+  /* Work & About Sections */
   .work h2, .about h2 {
     font-size: 2.5rem;
   }
@@ -415,13 +415,31 @@ nav {
     flex-direction: column;
   }
 
+  .about .content {
+    order: 0;
+  }
+
   .about-icon {
+    order: 1;
     width: 100%;
     max-width: 300px;
     margin: 0 auto;
+    margin-top: -40px;
+    margin-left: 10px;
   }
 
-  /* Footer adjustments */
+  /* owl */
+  .art img {
+    margin-left: 20px;
+  }
+
+  /* Work page grid */
+  .work-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  /* Footer */
   .footer-name {
     font-size: 8vw;
     letter-spacing: 2px;
@@ -531,6 +549,218 @@ nav {
     .gallery-grid {
         grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
         gap: 20px;
+    }
+
+    /* Work page gallery responsiveness */
+    .work-page {
+        padding: 80px 5% 60px;
+    }
+
+    .work-page h1 {
+        font-size: 2.5rem;
+        margin-bottom: 30px;
+    }
+
+    .gallery-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+        padding: 0 10px;
+    }
+
+    .gallery-item img {
+        height: 150px;
+    }
+
+    /* Icon sizing adjustments for mobile */
+    .icon-tattoo {
+        max-width: 150px !important;
+    }
+
+    .icon-animation {
+        max-width: 200px !important;
+    }
+
+    .icon-illustration {
+        max-width: 250px !important;
+    }
+
+    /* Work grid adjustments */
+    .work-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 30px;
+    }
+
+    /* Modal responsiveness */
+    .modal-image {
+        max-width: 95%;
+        max-height: 85vh;
+    }
+
+    .modal-close {
+        top: 15px;
+        right: 20px;
+        font-size: 30px;
+    }
+
+    /* About page top section */
+    .about-top {
+        padding: 60px 5% 20px;
+    }
+
+    /* Professional section adjustments */
+    .professional-section {
+        padding: 40px 5%;
+    }
+
+    .professional-section h2 {
+        font-size: 1.5rem;
+        margin-bottom: 30px;
+    }
+
+    /* Education and profile styling */
+    .education h3 {
+        font-size: 1.1rem;
+    }
+
+    .education p {
+        font-size: 0.9rem;
+    }
+
+    .profile-img {
+        width: 200px;
+    }
+}
+
+/* Extra small devices - new content */
+@media screen and (max-width: 480px) {
+    .work-page {
+        padding: 80px 5% 40px;
+    }
+
+    .work-page h1 {
+        font-size: 1.8rem;
+        margin-bottom: 20px;
+    }
+
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+        padding: 0 5px;
+    }
+
+    .gallery-item img {
+        height: 120px;
+    }
+
+    .item-description {
+        padding: 10px;
+    }
+
+    .item-description h3 {
+        font-size: 0.9rem;
+    }
+
+    .item-description p {
+        font-size: 0.8rem;
+    }
+
+    /* Icon sizing for extra small screens */
+    .icon-tattoo {
+        max-width: 100px !important;
+    }
+
+    .icon-animation {
+        max-width: 130px !important;
+    }
+
+    .icon-illustration {
+        max-width: 180px !important;
+    }
+
+    /* Work grid single column */
+    .work-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .work-item h3 {
+        font-size: 1.2rem;
+    }
+
+    /* Modal for small screens */
+    .modal-image {
+        max-width: 100%;
+        max-height: 80vh;
+    }
+
+    .modal-close {
+        top: 10px;
+        right: 15px;
+        font-size: 25px;
+    }
+
+    /* About section adjustments */
+    .about-section {
+        padding: 40px 5%;
+    }
+
+    .about-section h1 {
+        font-size: 2rem;
+    }
+
+    .about-section h2 {
+        font-size: 1.1rem;
+        margin-bottom: 20px;
+    }
+
+    .about-section p {
+        max-width: 100%;
+        font-size: 0.95rem;
+    }
+
+    /* Professional section */
+    .professional-section {
+        padding: 30px 5%;
+    }
+
+    .professional-section h2 {
+        font-size: 1.3rem;
+        margin-bottom: 20px;
+    }
+
+    .bottom-container {
+        gap: 20px;
+    }
+
+    .education h3 {
+        font-size: 1rem;
+    }
+
+    .education p {
+        font-size: 0.85rem;
+        margin-bottom: 10px;
+    }
+
+    .profile-img {
+        width: 150px;
+    }
+
+    .contact {
+        padding: 15px;
+    }
+
+    .contact p {
+        margin: 5px 0;
+        font-size: 0.85rem;
+    }
+
+    /* Gallery item description */
+    .item-description {
+        padding: 8px;
+    }
+
+    .work-item-grid-mobile {
+        max-width: 150px;
     }
 }
 
