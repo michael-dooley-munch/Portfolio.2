@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Illustrations | Michael Dooley</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <a href="index.html" class="nav-home-link" aria-label="Home">
+            <img src="images/flame-icon-small.png" alt="Home" class="nav-flame-icon">
+        </a>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="work.html">Work</a>
+            <a href="about.html">About</a>
+        </div>
+    </nav>
+
+    <!-- Illustrations Section -->
+    <section class="work-page">
+            <h1>My Illustrations</h1>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="images/gas mask skch.png" alt="Image 1" class="clickable-image">
+                </div>
+                <div class="gallery-item">
+                    <img src="images/gas mask.png" alt="Image 2" class="clickable-image">
+                </div>
+                <div class="gallery-item">
+                    <img src="images/gurren lagann banner.png" alt="Image 3" class="clickable-image">
+                </div>
+                <div class="gallery-item">
+                    <img src="images/knight.png" alt="Image 4" class="clickable-image">
+                </div>
+                <div class="gallery-item">
+                    <img src="images/pfp.png" alt="Image 5" class="clickable-image">
+                </div>
+            </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <h1 class="footer-name">MICHAEL F. DOOLEY</h1>
+    <hr class="footer-line">
+    <p class="footer-email">Email: <a href="mailto:michaeldooley.munch@gmail.com">michaeldooley.munch@gmail.com</a></p>
+    
+    <div class="footer-icons">
+    <a href="https://www.instagram.com/ink.munch/" target="_blank" class="icon">
+        <img src="images/instagram icon.png" alt="Instagram" style="width: 24px; height: 24px;">
+    </a>
+    <a href="https://www.linkedin.com/in/michael-dooley-4241bb270/" target="_blank" class="icon">
+        <img src="images/linkedin icon.png" alt="LinkedIn" style="width: 24px; height: 24px;">
+    </a>
+    <a href="https://www.youtube.com/@Ink_Munch" target="_blank" class="icon">
+        <img src="images/youtube icon.png" alt="YouTube" style="width: 24px; height: 24px;">
+    </a>
+</div>
+    </footer>
+
+    <!-- Image Modal -->
+    <div id="imageModal" class="modal">
+        <span class="modal-close">&times;</span>
+        <img class="modal-image" id="modalImage" src="" alt="">
+    </div>
+
+    <script>
+        // Get modal elements
+        const modal = document.getElementById('imageModal');
+        const modalImage = document.getElementById('modalImage');
+        const closeBtn = document.querySelector('.modal-close');
+        const clickableImages = document.querySelectorAll('.clickable-image');
+
+        // Open modal when image is clicked
+        clickableImages.forEach(img => {
+            img.addEventListener('click', function() {
+                modal.classList.add('show');
+                modalImage.src = this.src;
+                modalImage.alt = this.alt;
+            });
+        });
+
+        // Close modal when X is clicked
+        closeBtn.addEventListener('click', function() {
+            modal.classList.remove('show');
+        });
+
+        // Close modal when clicking outside the image
+        modal.addEventListener('click', function(event) {
+            if (event.target === modal) {
+                modal.classList.remove('show');
+            }
+        });
+
+        // Close modal with Escape key
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'Escape') {
+                modal.classList.remove('show');
+            }
+        });
+    </script>
+</body>
+</html>
