@@ -425,12 +425,13 @@ nav {
     max-width: 300px;
     margin: 0 auto;
     margin-top: -40px;
-    margin-left: 10px;
   }
 
   /* owl */
   .art img {
-    margin-left: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
   }
 
   /* Work page grid */
